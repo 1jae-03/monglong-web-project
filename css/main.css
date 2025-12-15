@@ -1,21 +1,178 @@
-.m-logo{
-    width: 250px;
-}
-
-.nav-item {
-    margin: 0 50px;
-}
-
-#nav {
-    border-bottom: 2px solid #787878;
-}
-
-.nav-link {
-    font-size: 20px;
+body {
+    background-color: #ffffff;
     color: #000000;
+    padding-top: 56px; /* fixed nav height */
+}
+
+.main-logo {
+    width: 200px;
+}
+
+/* =========================
+    Top Navigation
+========================= */
+.navbar {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* =========================
+    Side Menu (Offcanvas)
+========================= */
+.accordion-button {
+    background-color: #fff !important;
+    color: #000;
+    box-shadow: none !important;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+
+    /* TOP / BOTTOM BORDER CUSTOM */
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
+    background-color: #fff !important;
+    color: #000;
+    box-shadow: none;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-button::after {
+    background-size: 0.8rem;
+}
+
+.accordion-button.no-arrow::after {
+    display: none;
+}
+
+.accordion-body {
+    padding: 0.75rem 1.75rem 1rem;
+}
+
+.accordion-body ul li {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.accordion-body ul li a {
+    color: #444;
+    text-decoration: none;
+}
+
+.accordion-body ul li a:hover {
+    text-decoration: underline;
+}
+
+.carousel-inner img {
+  height: 520px;
+  object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 48px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 14px 14px;
+  filter: invert(1);
+  opacity: 0.4;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  opacity: 0.9;
+}
+
+/* =========================
+    Category Section
+========================= */
+
+.category-section.fixed {
+  position: fixed;
+  top: 56px; /* nav 높이 */
+  left: 0;
+  width: 100%;
+  z-index: 1020;
+  background: #fff;
+}
+
+body.has-fixed-category {
+  padding-top: 176px !important; /* nav + category 높이 */
+}
+
+.category-section {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0.75rem 0;
+  margin: 0;
+  list-style: none;
+}
+
+.category-list a {
+  text-decoration: none;
+  color: #888;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.category-list a:hover {
+  color: #000;
+}
+
+.category-list li a {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    color: #9a9a9a;
+    text-decoration: none;
     font-weight: 500;
 }
 
-.carousel-item {
-    width: 400px;
+.category-list li a:hover {
+    color: #000;
+}
+
+.category-list li a.active {
+    color: #000;
+    font-weight: 600;
+}
+
+/* =========================
+    Product Card (Sample)
+========================= */
+.product-card {
+    border: 1px solid #e5e5e5;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.product-img {
+    background-color: #f8f9fa;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+footer {
+    border-top: 1px solid #e5e5e5;
 }
