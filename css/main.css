@@ -1,23 +1,17 @@
 body {
     background-color: #ffffff;
     color: #000000;
-    padding-top: 56px; /* fixed nav height */
+    padding-top: 56px;
 }
 
 .main-logo {
     width: 200px;
 }
 
-/* =========================
-    Top Navigation
-========================= */
 .navbar {
     border-bottom: 1px solid #e5e5e5;
 }
 
-/* =========================
-    Side Menu (Offcanvas)
-========================= */
 .accordion-button {
     background-color: #fff !important;
     color: #000;
@@ -26,8 +20,6 @@ body {
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.04em;
-
-    /* TOP / BOTTOM BORDER CUSTOM */
     border-top: 2px solid #000;
     border-bottom: 1px solid #e0e0e0;
 }
@@ -90,9 +82,18 @@ body {
   opacity: 0.9;
 }
 
-/* =========================
-    Category Section
-========================= */
+.main-banner {
+    padding: 50px 0;
+    background-color: #f6f6f6;
+}
+
+.view-more {
+    margin-top: 80px;
+}
+
+.view-more > a {
+    text-decoration: none;
+}
 
 .category-section.fixed {
   position: fixed;
@@ -104,7 +105,7 @@ body {
 }
 
 body.has-fixed-category {
-  padding-top: 176px !important; /* nav + category 높이 */
+  padding-top: 176px !important;
 }
 
 .category-section {
@@ -150,9 +151,6 @@ body.has-fixed-category {
     font-weight: 600;
 }
 
-/* =========================
-    Product Card (Sample)
-========================= */
 .product-card {
     border: 1px solid #e5e5e5;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -165,12 +163,186 @@ body.has-fixed-category {
 
 .product-img {
     background-color: #f8f9fa;
-    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.9rem;
     color: #999;
+}
+
+.product-img img {
+    height: 442px;
+}
+
+.mypage {
+  max-width: 1100px;
+}
+
+.mypage-title {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.mypage-tab {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #aaa;
+}
+
+.mypage-tab a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.mypage-tab a.active {
+  color: #000;
+  font-weight: 500;
+}
+
+.mypage-divider {
+  border-top: 1px solid #e5e5e5;
+  margin: 20px 0 50px;
+}
+
+/* Profile */
+.profile-img {
+  width: 120px;
+  height: 120px;
+  background-color: #d0d0d0;
+  border-radius: 50%;
+  font-size: 48px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Info */
+.info-row {
+  display: flex;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.info-row .label {
+  width: 90px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Right menu */
+.mypage-right {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.mypage-right a {
+  color: #888;
+  text-decoration: none;
+  margin-left: 14px;
+}
+
+.mypage-right a:hover {
+  text-decoration: underline;
+}
+
+.cart-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.cart-table {
+  font-size: 0.9rem;
+  border-top: 2px solid #999;
+}
+
+.cart-table thead th {
+  font-weight: 500;
+  color: #555;
+  border-bottom: 1px solid #bbb;
+  padding: 12px 8px;
+}
+
+.cart-table tbody td {
+  padding: 14px 8px;
+  vertical-align: middle;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-table input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.qty-input {
+  width: 60px;
+  padding: 4px 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Summary */
+.cart-summary {
+  margin-top: 30px;
+  max-width: 300px;
+  margin-left: auto;
+  font-size: 0.9rem;
+}
+
+.cart-summary div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.cart-summary .total {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #ddd;
+  font-weight: 600;
+  color: #000;
+}
+
+.order-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.order-table {
+  font-size: 0.9rem;
+  border-top: 2px solid #999;
+}
+
+.order-table thead th {
+  font-weight: 500;
+  color: #555;
+  border-bottom: 1px solid #bbb;
+  padding: 12px 8px;
+}
+
+.order-table tbody td {
+  padding: 14px 8px;
+  vertical-align: middle;
+  border-bottom: 1px solid #eee;
+}
+
+/* Status */
+.status {
+  font-size: 0.85rem;
+}
+
+.status.done {
+  color: #555;
+}
+
+.status.return {
+  color: #999;
 }
 
 footer {
