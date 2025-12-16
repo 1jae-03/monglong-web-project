@@ -1,4 +1,4 @@
-
+// 스크롤 시 상단 nav, category 고정
 document.addEventListener("scroll", () => {
   const nav = document.getElementById("nav");
   const header = document.getElementById("header");
