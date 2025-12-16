@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!--head>
+  <meta charset="UTF-8">
+  <title>상품 상세</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.main.css"  rel="stylesheet">
+   <link rel="stylesheet" href="/css/main.css">
+</head-->
+  <head>
+    <meta charset="utf-8">
+    <title>상품 상세</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Bootstrap Example</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+<body>
+
+<section class="py-5">
+    <div class="container px-1 text-center">
+        <div class="row g-1">
+            <!-- 왼쪽: 상품 이미지 -->
+            <div class="col-4">
+                    <div class="product-image-wrap">
+                        <img src="/image/DIY/DIY_2.jpg" alt="상품 이미지" class="product-detail-img">
+                    </div>
+            </div>
+            <!-- 오른쪽: 상품 정보 -->
+            <div class="col-5">
+                    <div class="product-info">
+                        <h4 class="product-title">
+                            전통 동심결 매듭 키링 DIY 키트
+                        </h4>
+
+                        <div class="info-row">
+                            <div class="label">판매가</div>
+                            <div class="value fw-bold">5,600원</div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="label">배송방법</div>
+                            <div class="value">택배</div>
+                        </div>
+
+                        <div class="info-row">
+                            <div class="label">수량</div>
+                            <div class="value d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm" id="minusBtn">−</button>
+                            <input type="text" id="qty" class="form-control qty-input" value="1">
+                            <button class="btn btn-outline-secondary btn-sm" id="plusBtn">+</button>
+                            </div>
+                        </div>
+
+                        <div class="info-row border-bottom-0">
+                            <div class="label">총상품금액</div>
+                            <div class="value total-price" id="totalPrice">
+                            5,600원
+                            </div>
+                        </div>
+
+                        <div class="button-area">
+                            <button class="btn btn-outline-secondary w-50">장바구니</button>
+                            <button class="btn btn-dark w-50">구매하기</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<!-- 수량 계산 JS -->
+<script>
+  const price = 5600;
+  const qtyInput = document.getElementById('qty');
+  const totalPrice = document.getElementById('totalPrice');
+
+  document.getElementById('plusBtn').onclick = () => {
+    qtyInput.value = Number(qtyInput.value) + 1;
+    updatePrice();
+  };
+
+  document.getElementById('minusBtn').onclick = () => {
+    if (qtyInput.value > 1) {
+      qtyInput.value = Number(qtyInput.value) - 1;
+      updatePrice();
+    }
+  };
+
+  function updatePrice() {
+    totalPrice.innerText =
+      (price * qtyInput.value).toLocaleString() + '원';
+  }
+</script>
+
+<!-- Footer -->
+  <footer id="footer" class="py-4 text-center"></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/include.js"></script>
+  <script src="/js/category.js"></script>
+
+</body>
+</html>
